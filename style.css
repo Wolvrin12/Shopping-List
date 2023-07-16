@@ -35,8 +35,9 @@ body {
 }
 
 #userinput {
-  margin: 10px 10px 30px 25%;
-  padding: 15px;
+  margin: 10px 10px 30px 30%;
+  padding: 15px 10px;
+  width: 25%;
   font-size: larger;
   color: rgb(25, 15, 80);
   border-radius: 10px;
@@ -50,12 +51,13 @@ body {
   border-color: blueviolet;
   border-width: 2.5px;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 
 #enter:hover {
-  background-color: rgb(3, 42, 113);
+  background-color: rgb(5, 40, 115);
   color: azure;
+  border-color: rgb(25, 10, 110);
 }
 
 ul {
@@ -70,4 +72,5 @@ ul li {
   font-weight: bolder;
   padding: 5px;
   color: rgb(131, 79, 24);
+  cursor: pointer;
 }
