@@ -45,19 +45,20 @@ body {
 
 #enter {
   padding: 10px 15px;
-  font-size: larger;
-  background: transparent;
-  border-radius: 10px;
-  border-color: blueviolet;
-  border-width: 2.5px;
+  font-size: x-large;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: rgb(180, 215, 35);
+  background: rgb(0, 150, 150);
   cursor: pointer;
+  border-radius: 10px;
   transition: all 0.25s;
+  text-decoration: none;
 }
 
 #enter:hover {
-  background-color: rgb(5, 40, 115);
-  color: azure;
-  border-color: rgb(25, 10, 110);
+  background: rgb(180, 215, 35);
+  color: rgb(0, 150, 150);
 }
 
 ul {
@@ -67,10 +68,20 @@ ul {
 }
 
 ul li {
-  font-size: 1.25em;
+  font-size: 1.5em;
   font-family: sans-serif;
   font-weight: bolder;
-  padding: 5px;
-  color: rgb(131, 79, 24);
+  padding: 5px 0 10px 0;
+  color: rgb(180, 110, 35);
   cursor: pointer;
+}
+
+ul li i {
+  margin-left: 25px;
+  opacity: 0;
+  color: rgb(100, 20, 10);
+}
+
+ul li:hover i {
+  opacity: 1;
 }

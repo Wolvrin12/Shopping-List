@@ -1,15 +1,13 @@
-const button = document.getElementById("enter");
 const input = document.getElementById("userinput");
+const button = document.getElementById("enter");
 const ul = document.querySelector("ul");
-
-function inputLength() {
-  return input.value.length;
-}
+const removeBtn = `<i class="fa fa-times" aria-hidden="true"></i>`;
 
 function createListElement() {
-  var li = document.createElement("li");
+  const li = document.createElement("li");
   li.appendChild(document.createTextNode(input.value));
-  li.addEventListener("click", () => {
+  li.insertAdjacentHTML("beforeend", removeBtn);
+  li.children[0].addEventListener("click", () => {
     ul.removeChild(li);
   });
   ul.appendChild(li);
@@ -17,13 +15,13 @@ function createListElement() {
 }
 
 button.addEventListener("click", () => {
-  if (inputLength() > 0) {
+  if (input.value.length > 0) {
     createListElement();
   }
 });
 
 input.addEventListener("keypress", (e) => {
-  if (inputLength() > 0 && e.which === 13) {
+  if (input.value.length > 0 && e.which === 13) {
     createListElement();
   }
 });
